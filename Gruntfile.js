@@ -21,6 +21,7 @@ module.exports = function(grunt) {
             uglify: {
                 dist: {
                     options: {
+                        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> by <%= pkg.author %> */',
                         mangle: true,
                         preserveComments: false,
                         drop_console: true,
@@ -28,10 +29,9 @@ module.exports = function(grunt) {
                             global_defs: {
                                 DEBUG: false
                             }
-                        },
-                    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> by <%= pkg.author %> :: '
+                        }
                     },
-                    files: {'dist/lib/fellowHumans<%= pkg.version %>.min.js': ['src/fellowHumans.js']
+                    files: {'dist/lib/fellowHumans.<%= pkg.version %>.min.js': ['src/fellowHumans.js']
                     }
                 },
                 dev: {
@@ -40,9 +40,11 @@ module.exports = function(grunt) {
                         preserveComments: true,
                         drop_console: false,
                         compress: false,
-                        beautify: true
+                        beautify: true,
+                        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> by <%= pkg.author %> */\n'
                     },
-                    files: jsFiles
+                    files: {'dist/lib/fellowHumans.<%= pkg.version %>.js': ['src/fellowHumans.js']
+                    }
                 }
             },
             watch: {
