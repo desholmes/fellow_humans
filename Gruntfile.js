@@ -24,11 +24,8 @@ module.exports = function(grunt) {
                         banner: '/*! <%= pkg.name %> - v<%= pkg.version %> by <%= pkg.author %> */',
                         mangle: true,
                         preserveComments: false,
-                        drop_console: true,
                         compress: {
-                            global_defs: {
-                                DEBUG: false
-                            }
+                            drop_console: true
                         }
                     },
                     files: {'dist/lib/fellowHumans.<%= pkg.version %>.min.js': ['src/fellowHumans.js']
