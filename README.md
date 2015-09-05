@@ -4,7 +4,8 @@ This bookmarklet replaces the word 'migrant' with 'fellow human'. Instructions f
 
 This bookmarklet was inspired by the [Fellow Humans](https://chrome.google.com/webstore/detail/remove-migrants/kmdpkapikjlaalmegifglibikjdfalen/related) Chrome extension written by [John Kilpatrick (@jjkilpatrick)](https://twitter.com/jjkilpatrick).
 
-*Browser support (desktop):*
+**Browser support (desktop):**
+
 * Chrome: 1.0
 * Firefox (Gecko): 2.0 (1.8.1)
 * Internet Explorer: 10
